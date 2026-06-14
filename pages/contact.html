@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Contact Us – NISHLAB CREATIONS</title>
+<link rel="stylesheet" href="../css/style.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+<style>
+.contact-section { padding: 70px 0; }
+.contact-grid { display: grid; grid-template-columns: 1fr 1.6fr; gap: 50px; align-items: start; }
+.contact-info h2 { font-size: 28px; color: var(--navy); margin-bottom: 10px; }
+.contact-info h2 span { color: var(--gold); }
+.contact-info > p { color: var(--text-gray); font-size: 14px; line-height: 1.7; margin-bottom: 30px; }
+.info-card { background: var(--white); border-radius: 10px; padding: 20px 22px; box-shadow: 0 3px 15px rgba(0,0,0,0.08); display: flex; align-items: flex-start; gap: 15px; margin-bottom: 15px; }
+.info-icon { width: 45px; height: 45px; background: linear-gradient(135deg, var(--navy), var(--navy-light)); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--gold); font-size: 18px; flex-shrink: 0; }
+.info-text h4 { font-size: 14px; color: var(--navy); margin-bottom: 4px; }
+.info-text p, .info-text a { font-size: 13.5px; color: var(--text-gray); line-height: 1.5; }
+.info-text a:hover { color: var(--gold); }
+.social-links { display: flex; gap: 12px; margin-top: 20px; }
+.social-link { width: 42px; height: 42px; background: var(--navy); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--white); font-size: 16px; transition: background 0.2s; }
+.social-link:hover { background: var(--gold); }
+/* Contact form card */
+.contact-form-card { background: var(--white); border-radius: 12px; padding: 40px; box-shadow: 0 5px 25px rgba(0,0,0,0.1); }
+.contact-form-card h3 { font-size: 22px; color: var(--navy); margin-bottom: 5px; }
+.contact-form-card > p { color: var(--text-gray); font-size: 14px; margin-bottom: 25px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+.form-group label { display: block; font-size: 13px; font-weight: 600; color: var(--navy); margin-bottom: 6px; font-family: 'Montserrat', sans-serif; }
+.form-group input, .form-group select, .form-group textarea {
+  width: 100%; padding: 12px 15px; border: 1.5px solid var(--border);
+  border-radius: 7px; font-size: 13.5px; color: var(--text-dark);
+  outline: none; transition: border-color 0.2s; font-family: 'Open Sans', sans-serif;
+  background: var(--white);
+}
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--gold); }
+.form-group textarea { resize: vertical; min-height: 110px; }
+/* Map section */
+.map-section { padding: 0 0 70px; }
+.map-wrapper { border-radius: 12px; overflow: hidden; box-shadow: 0 5px 25px rgba(0,0,0,0.1); height: 380px; background: var(--light-bg); display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 15px; color: var(--text-gray); font-size: 15px; }
+.map-wrapper i { font-size: 50px; color: var(--gold); }
+/* Enroll section */
+.enroll-section { padding: 70px 0; background: var(--light-bg); }
+.enroll-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
+.enroll-text h2 { font-size: 32px; color: var(--navy); margin-bottom: 15px; }
+.enroll-text h2 span { color: var(--gold); }
+.enroll-text p { color: var(--text-gray); font-size: 14.5px; line-height: 1.8; margin-bottom: 15px; }
+.enroll-benefits { list-style: none; margin-bottom: 25px; }
+.enroll-benefits li { display: flex; align-items: center; gap: 10px; font-size: 14px; color: var(--navy); font-weight: 600; padding: 6px 0; }
+.enroll-benefits li i { color: var(--gold); }
+@media(max-width:900px){ .contact-grid,.enroll-grid,.form-row{ grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+
+<div class="topbar"><div class="container">
+  <div class="topbar-left">
+    <a href="mailto:info@nishlabcreations.com"><i class="fas fa-envelope"></i> info@nishlabcreations.com</a>
+    <a href="tel:+918424099617"><i class="fas fa-phone"></i> +91 84240 99617</a>
+  </div>
+  <div class="topbar-right">
+    <a href="students.html"><i class="fas fa-user"></i> Student Login</a>
+    <div class="topbar-social"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-youtube"></i></a><a href="#"><i class="fab fa-linkedin-in"></i></a></div>
+  </div>
+</div></div>
+
+<nav class="navbar"><div class="nav-inner">
+  <a href="../index.html" class="nav-logo"><img src="../logo.png" alt="NISHLAB CREATIONS" /><div class="nav-logo-text">NISHLAB<span>CREATIONS</span></div></a>
+  <button class="hamburger"><span></span><span></span><span></span></button>
+  <ul class="nav-links">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li class="dropdown"><a href="courses.html">Courses ▾</a>
+      <ul class="dropdown-menu"><li><a href="courses.html#solidworks">SolidWorks</a></li><li><a href="courses.html#catia">CATIA</a></li><li><a href="courses.html#ansys">ANSYS</a></li></ul>
+    </li>
+    <li><a href="online-training.html">Online Training</a></li>
+    <li class="dropdown"><a href="students.html">Students ▾</a>
+      <ul class="dropdown-menu"><li><a href="students.html">Student Portal</a></li><li><a href="students.html#placements">Placements</a></li></ul>
+    </li>
+    <li><a href="contact.html" class="active">Contact Us</a></li>
+    <li><a href="#enroll" class="btn-enroll">ENROLL NOW</a></li>
+  </ul>
+</div></nav>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="../index.html">Home</a><span>›</span><span>Contact Us</span></div>
+    <h1>Get In <span>Touch With Us</span></h1>
+    <p>Have questions about our courses? Reach out and we'll get back to you within a few hours.</p>
+  </div>
+</section>
+
+<section class="contact-section">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h2>Let's Talk About <span>Your Career</span></h2>
+        <p>Whether you want to know which course suits you best, about batch timings, fees, or online training — our team is here to help. No hard selling, just honest guidance.</p>
+        <div class="info-card">
+          <div class="info-icon"><i class="fas fa-phone-alt"></i></div>
+          <div class="info-text">
+            <h4>Call / WhatsApp</h4>
+            <a href="tel:+918424099617">+91 84240 99617</a>
+          </div>
+        </div>
+        <div class="info-card">
+          <div class="info-icon"><i class="fas fa-envelope"></i></div>
+          <div class="info-text">
+            <h4>Email</h4>
+            <a href="mailto:info@nishlabcreations.com">info@nishlabcreations.com</a>
+          </div>
+        </div>
+        <div class="info-card">
+          <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+          <div class="info-text">
+            <h4>Location</h4>
+            <p>NISHLAB CREATIONS<br>Antop Hill / Wadala, Mumbai<br>Maharashtra, India</p>
+          </div>
+        </div>
+        <div class="info-card">
+          <div class="info-icon"><i class="fas fa-clock"></i></div>
+          <div class="info-text">
+            <h4>Working Hours</h4>
+            <p>Mon – Sat: 9:00 AM – 9:00 PM<br>Sunday: 10:00 AM – 5:00 PM</p>
+          </div>
+        </div>
+        <div class="info-card">
+          <div class="info-icon"><i class="fab fa-telegram-plane"></i></div>
+          <div class="info-text">
+            <h4>Telegram Support</h4>
+            <p>Join NISHLAB UPDATES for batch notifications and instant support.</p>
+          </div>
+        </div>
+        <div class="social-links">
+          <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+
+      <div class="contact-form-card">
+        <h3>Send Us a Message</h3>
+        <p>Fill the form and we'll reach out to you within 24 hours.</p>
+        <form class="contact-form" autocomplete="off">
+          <div class="form-row">
+            <div class="form-group">
+              <label>Full Name *</label>
+              <input type="text" placeholder="Your full name" required />
+            </div>
+            <div class="form-group">
+              <label>Mobile Number *</label>
+              <input type="tel" placeholder="+91 XXXXX XXXXX" required />
+            </div>
+          </div>
+          <div class="form-group" style="margin-top:14px;">
+            <label>Email Address</label>
+            <input type="email" placeholder="your@email.com" />
+          </div>
+          <div class="form-group" style="margin-top:14px;">
+            <label>Course of Interest *</label>
+            <select required>
+              <option value="">Select a Course</option>
+              <option>SolidWorks</option>
+              <option>CATIA V5 / V6</option>
+              <option>ANSYS CAE</option>
+              <option>NASTRAN / Patran</option>
+              <option>MasterCAM</option>
+              <option>AutoCAD 2D / 3D</option>
+              <option>KeyShot Rendering</option>
+              <option>Excel VBA + SolidWorks API</option>
+              <option>Not sure – need guidance</option>
+            </select>
+          </div>
+          <div class="form-group" style="margin-top:14px;">
+            <label>Training Mode</label>
+            <select>
+              <option>Online</option>
+              <option>Offline – Mumbai</option>
+              <option>Both (flexible)</option>
+            </select>
+          </div>
+          <div class="form-group" style="margin-top:14px;">
+            <label>Your Message</label>
+            <textarea placeholder="Tell us about your background, goals, or any questions you have..."></textarea>
+          </div>
+          <button type="submit" class="btn-submit" style="margin-top:18px;">SEND MESSAGE</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="map-section">
+  <div class="container">
+    <div class="map-wrapper">
+      <i class="fas fa-map-marker-alt"></i>
+      <p><strong>NISHLAB CREATIONS</strong> – Antop Hill / Wadala, Mumbai, Maharashtra</p>
+      <a href="https://maps.google.com/?q=Antop+Hill+Wadala+Mumbai" target="_blank" class="btn btn-primary" style="margin-top:5px;">
+        <i class="fas fa-directions"></i> Get Directions
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="enroll-section" id="enroll">
+  <div class="container">
+    <div class="enroll-grid">
+      <div class="enroll-text">
+        <span class="badge">Enroll Now</span>
+        <h2 style="margin-top:15px;">Start Your <span>Engineering Career</span> Today</h2>
+        <p>Ready to take the next step? Fill the quick enrollment form and our team will confirm your seat and send all batch details within 24 hours.</p>
+        <ul class="enroll-benefits">
+          <li><i class="fas fa-check-circle"></i> Free demo class before commitment</li>
+          <li><i class="fas fa-check-circle"></i> Flexible payment options</li>
+          <li><i class="fas fa-check-circle"></i> Small batch sizes – personalised attention</li>
+          <li><i class="fas fa-check-circle"></i> Lifetime access to study materials</li>
+          <li><i class="fas fa-check-circle"></i> Certificate + placement support included</li>
+        </ul>
+        <a href="tel:+918424099617" class="btn btn-primary"><i class="fab fa-whatsapp"></i> WhatsApp Us Now</a>
+      </div>
+      <div>
+        <div class="contact-form-card">
+          <h3>Quick Enrollment Form</h3>
+          <p>Fill in your details and we'll confirm your seat.</p>
+          <form class="contact-form" autocomplete="off">
+            <div class="form-group"><label>Full Name *</label><input type="text" placeholder="Your full name" required /></div>
+            <div class="form-group" style="margin-top:14px;"><label>Mobile / WhatsApp *</label><input type="tel" placeholder="+91 XXXXX XXXXX" required /></div>
+            <div class="form-group" style="margin-top:14px;"><label>Email Address</label><input type="email" placeholder="your@email.com" /></div>
+            <div class="form-group" style="margin-top:14px;"><label>Course *</label>
+              <select required>
+                <option value="">Select Course</option>
+                <option>SolidWorks</option><option>CATIA</option><option>ANSYS</option>
+                <option>NASTRAN</option><option>MasterCAM</option><option>AutoCAD</option>
+                <option>KeyShot</option><option>Excel VBA</option>
+              </select>
+            </div>
+            <div class="form-group" style="margin-top:14px;"><label>Preferred Timing</label>
+              <select>
+                <option>Morning (8–10 AM)</option>
+                <option>Evening (6–8 PM)</option>
+                <option>Evening (7–9 PM)</option>
+                <option>Weekend Batch</option>
+              </select>
+            </div>
+            <button type="submit" class="btn-submit" style="margin-top:18px;">CONFIRM ENROLLMENT</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo"><img src="../logo.png" alt="NISHLAB CREATIONS" /><div class="footer-logo-text">NISHLAB<span>CREATIONS</span></div></div>
+        <p class="footer-about-text">Industry oriented training in CAD, CAM, CAE with 100% practical approach.</p>
+        <div class="footer-social"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-youtube"></i></a><a href="#"><i class="fab fa-linkedin-in"></i></a></div>
+      </div>
+      <div class="footer-col"><h4>Quick Links</h4>
+        <ul class="footer-links"><li><a href="../index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="courses.html">Courses</a></li><li><a href="online-training.html">Online Training</a></li><li><a href="students.html">Students</a></li><li><a href="contact.html">Contact Us</a></li></ul>
+      </div>
+      <div class="footer-col"><h4>Our Courses</h4>
+        <ul class="footer-links"><li><a href="courses.html#solidworks">SolidWorks</a></li><li><a href="courses.html#catia">CATIA</a></li><li><a href="courses.html#ansys">ANSYS</a></li><li><a href="courses.html#nastran">NASTRAN</a></li><li><a href="courses.html#mastercam">MasterCAM</a></li></ul>
+      </div>
+      <div class="footer-col"><h4>Contact Us</h4>
+        <ul class="footer-contact"><li><i class="fas fa-phone"></i> +91 84240 99617</li><li><i class="fas fa-envelope"></i> info@nishlabcreations.com</li><li><i class="fas fa-map-marker-alt"></i> Antop Hill / Wadala, Mumbai</li></ul>
+      </div>
+      <div class="footer-col"><h4>Newsletter</h4>
+        <p style="color:rgba(255,255,255,0.6);font-size:13px;margin-bottom:15px;">Subscribe for updates and offers.</p>
+        <form class="newsletter-form" autocomplete="off"><input type="email" placeholder="Enter your email" required /><button type="submit">SUBSCRIBE</button></form>
+      </div>
+    </div>
+  </div>
+  <div class="container"><div class="footer-bottom"><p>© 2024 NISHLAB CREATIONS. All Rights Reserved.</p><div class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms &amp; Conditions</a></div></div></div>
+</footer>
+<script src="../js/main.js"></script>
+</body>
+</html>

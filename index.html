@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>NISHLAB CREATIONS – Build Your Career in CAD | CAM | CAE</title>
+<meta name="description" content="NISHLAB CREATIONS offers industry-oriented CAD, CAM, CAE training in Mumbai with live projects and 100% placement support." />
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+<style>
+/* HOME-SPECIFIC */
+.hero {
+  background: linear-gradient(135deg, var(--navy) 0%, #162840 60%, #1a3a5c 100%);
+  min-height: 540px;
+  display: flex;
+  align-items: center;
+  padding: 60px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -60px; right: -60px;
+  width: 400px; height: 400px;
+  background: radial-gradient(circle, rgba(245,166,35,0.12) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.hero-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  flex-wrap: wrap;
+}
+
+.hero-left { flex: 1; min-width: 280px; }
+
+.hero-badge {
+  display: inline-block;
+  background: var(--gold);
+  color: var(--white);
+  padding: 6px 18px;
+  border-radius: 4px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 22px;
+}
+
+.hero-title {
+  font-size: clamp(28px, 5vw, 46px);
+  color: var(--white);
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: 18px;
+}
+
+.hero-title .gold { color: var(--gold); }
+
+.hero-sub {
+  font-size: 16px;
+  color: rgba(255,255,255,0.85);
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.hero-points {
+  font-size: 14px;
+  color: rgba(255,255,255,0.65);
+  margin-bottom: 32px;
+}
+
+.hero-actions { display: flex; gap: 15px; flex-wrap: wrap; }
+
+.hero-right {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.hero-img {
+  width: 260px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+  opacity: 0.9;
+  display: block;
+}
+
+/* Placeholder engine image via gradient */
+.hero-engine {
+  width: 260px;
+  height: 220px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #1e3a5f 0%, #2a5280 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 80px;
+  opacity: 0.8;
+}
+
+/* Courses section */
+.courses-section { padding: 70px 0; background: var(--white); }
+
+/* Why section */
+.why-section { padding: 70px 0; background: var(--light-bg); }
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.why-card {
+  background: var(--white);
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 3px 15px rgba(0,0,0,0.07);
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.why-card:hover { transform: translateY(-4px); }
+
+.why-icon {
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, var(--navy), var(--navy-light));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 18px;
+  font-size: 28px;
+  color: var(--gold);
+}
+
+.why-card h3 {
+  font-size: 16px;
+  color: var(--navy);
+  margin-bottom: 10px;
+}
+
+.why-card p {
+  font-size: 13px;
+  color: var(--text-gray);
+  line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+  .why-grid { grid-template-columns: repeat(2, 1fr); }
+  .hero-engine { width: 100%; }
+}
+
+@media (max-width: 600px) {
+  .why-grid { grid-template-columns: 1fr; }
+  .courses-grid { grid-template-columns: 1fr 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="container">
+    <div class="topbar-left">
+      <a href="mailto:info@nishlabcreations.com"><i class="fas fa-envelope"></i> info@nishlabcreations.com</a>
+      <a href="tel:+918424099617"><i class="fas fa-phone"></i> +91 84240 99617</a>
+    </div>
+    <div class="topbar-right">
+      <a href="pages/students.html"><i class="fas fa-user"></i> Student Login</a>
+      <div class="topbar-social">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="logo.png" alt="NISHLAB CREATIONS Logo" />
+      <div class="nav-logo-text">NISHLAB<span>CREATIONS</span></div>
+    </a>
+    <button class="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="pages/about.html">About Us</a></li>
+      <li class="dropdown">
+        <a href="pages/courses.html">Courses ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="pages/courses.html#solidworks">SolidWorks</a></li>
+          <li><a href="pages/courses.html#catia">CATIA</a></li>
+          <li><a href="pages/courses.html#ansys">ANSYS</a></li>
+          <li><a href="pages/courses.html#nastran">NASTRAN</a></li>
+          <li><a href="pages/courses.html#mastercam">MasterCAM</a></li>
+          <li><a href="pages/courses.html#autocad">AutoCAD</a></li>
+          <li><a href="pages/courses.html#keyshot">KeyShot</a></li>
+        </ul>
+      </li>
+      <li><a href="pages/online-training.html">Online Training</a></li>
+      <li class="dropdown">
+        <a href="pages/students.html">Students ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="pages/students.html">Student Portal</a></li>
+          <li><a href="pages/students.html#placements">Placements</a></li>
+          <li><a href="pages/students.html#testimonials">Testimonials</a></li>
+        </ul>
+      </li>
+      <li><a href="pages/contact.html">Contact Us</a></li>
+      <li><a href="pages/contact.html#enroll" class="btn-enroll">ENROLL NOW</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-badge">🎓 Welcome to NISHLAB CREATIONS</div>
+      <h1 class="hero-title">
+        Build Your Career in<br>
+        <span class="gold">CAD | CAM | CAE</span>
+      </h1>
+      <p class="hero-sub">Industry Oriented Training with Live Projects</p>
+      <p class="hero-points">100% Practical &nbsp;|&nbsp; Expert Trainers &nbsp;|&nbsp; Placement Support</p>
+      <div class="hero-actions">
+        <a href="pages/courses.html" class="btn btn-primary">Explore Courses &nbsp;↗</a>
+        <a href="pages/contact.html" class="btn btn-outline">Contact Us &nbsp;↗</a>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-engine">⚙️</div>
+      <!-- Enquiry widget -->
+      <div class="enquiry-widget">
+        <h3>Enquire Now</h3>
+        <p>Get a Free Career Guidance</p>
+        <form class="enquiry-form" autocomplete="off">
+          <div class="form-group"><input type="text" placeholder="Your Name" required /></div>
+          <div class="form-group"><input type="tel" placeholder="Mobile Number" required /></div>
+          <div class="form-group"><input type="email" placeholder="Email Address" /></div>
+          <div class="form-group">
+            <select required>
+              <option value="">Select Course</option>
+              <option>SolidWorks</option>
+              <option>CATIA</option>
+              <option>ANSYS</option>
+              <option>NASTRAN</option>
+              <option>MasterCAM</option>
+              <option>AutoCAD</option>
+              <option>KeyShot</option>
+              <option>Excel VBA</option>
+            </select>
+          </div>
+          <button type="submit" class="btn-submit">SUBMIT NOW</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- POPULAR COURSES -->
+<section class="courses-section">
+  <div class="container">
+    <div class="section-title">
+      <h2>Popular Courses</h2>
+      <p>Learn from Industry Experts with Practical Knowledge</p>
+      <div class="underline"></div>
+    </div>
+    <div class="courses-grid">
+      <div class="course-card">
+        <div style="height:160px;background:linear-gradient(135deg,#0d1b2a,#1a3a5c);display:flex;align-items:center;justify-content:center;font-size:60px;">🔩</div>
+        <div class="course-card-body">
+          <h3>SolidWorks</h3>
+          <p class="duration">Duration: 45 Days</p>
+          <a href="pages/courses.html#solidworks" class="btn-view">View Details ↗</a>
+        </div>
+      </div>
+      <div class="course-card">
+        <div style="height:160px;background:linear-gradient(135deg,#1a2f47,#0d1b2a);display:flex;align-items:center;justify-content:center;font-size:60px;">✈️</div>
+        <div class="course-card-body">
+          <h3>CATIA</h3>
+          <p class="duration">Duration: 45 Days</p>
+          <a href="pages/courses.html#catia" class="btn-view">View Details ↗</a>
+        </div>
+      </div>
+      <div class="course-card">
+        <div style="height:160px;background:linear-gradient(135deg,#0d3340,#0a5263);display:flex;align-items:center;justify-content:center;font-size:60px;">🔥</div>
+        <div class="course-card-body">
+          <h3>ANSYS</h3>
+          <p class="duration">Duration: 45 Days</p>
+          <a href="pages/courses.html#ansys" class="btn-view">View Details ↗</a>
+        </div>
+      </div>
+      <div class="course-card">
+        <div style="height:160px;background:linear-gradient(135deg,#1a2f47,#243b55);display:flex;align-items:center;justify-content:center;font-size:60px;">🧮</div>
+        <div class="course-card-body">
+          <h3>NASTRAN</h3>
+          <p class="duration">Duration: 45 Days</p>
+          <a href="pages/courses.html#nastran" class="btn-view">View Details ↗</a>
+        </div>
+      </div>
+      <div class="course-card">
+        <div style="height:160px;background:linear-gradient(135deg,#2d1b0e,#5c3317);display:flex;align-items:center;justify-content:center;font-size:60px;">🏭</div>
+        <div class="course-card-body">
+          <h3>MasterCAM</h3>
+          <p class="duration">Duration: 45 Days</p>
+          <a href="pages/courses.html#mastercam" class="btn-view">View Details ↗</a>
+        </div>
+      </div>
+    </div>
+    <div class="text-center mt-20">
+      <a href="pages/courses.html" class="btn btn-navy">View All Courses ↗</a>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES BAR -->
+<div class="features-bar">
+  <div class="container">
+    <div class="features-grid">
+      <div class="feature-item">
+        <div class="feature-icon"><i class="fas fa-user-graduate"></i></div>
+        <div>
+          <h4>Industry Experts</h4>
+          <p>Learn from 10+ years experienced professionals</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon"><i class="fas fa-laptop-code"></i></div>
+        <div>
+          <h4>Live Projects</h4>
+          <p>Work on real-time industry projects</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon"><i class="fas fa-certificate"></i></div>
+        <div>
+          <h4>Certification</h4>
+          <p>Get certified &amp; enhance your career</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon"><i class="fas fa-handshake"></i></div>
+        <div>
+          <h4>Placement Support</h4>
+          <p>100% placement assistance for all students</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- STATS -->
+<section class="stats-section">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item">
+        <h3><span class="counter" data-target="2500" data-suffix="+">2500+</span></h3>
+        <p>Students Trained</p>
+      </div>
+      <div class="stat-item">
+        <h3><span class="counter" data-target="50" data-suffix="+">50+</span></h3>
+        <p>Courses</p>
+      </div>
+      <div class="stat-item">
+        <h3><span class="counter" data-target="10" data-suffix="+">10+</span></h3>
+        <p>Expert Trainers</p>
+      </div>
+      <div class="stat-item">
+        <h3><span class="counter" data-target="100" data-suffix="%">100%</span></h3>
+        <p>Placement Support</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section class="why-section">
+  <div class="container">
+    <div class="section-title">
+      <h2>Why Choose NISHLAB?</h2>
+      <p>We deliver real-world engineering skills, not just theory</p>
+      <div class="underline"></div>
+    </div>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-icon"><i class="fas fa-tools"></i></div>
+        <h3>100% Practical Training</h3>
+        <p>Every session is hands-on with actual software and real engineering components.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon"><i class="fas fa-project-diagram"></i></div>
+        <h3>Live Industry Projects</h3>
+        <p>Work on real projects used in manufacturing, automotive and aerospace sectors.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon"><i class="fas fa-award"></i></div>
+        <h3>Recognised Certification</h3>
+        <p>Get NISHLAB certified — a credential that hiring managers actually value.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+        <h3>Expert Faculty</h3>
+        <p>Trainers with 10+ years of industry experience in top engineering firms.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon"><i class="fas fa-briefcase"></i></div>
+        <h3>Placement Assistance</h3>
+        <p>Resume building, mock interviews and direct referrals to hiring companies.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon"><i class="fas fa-wifi"></i></div>
+        <h3>Online + Offline Both</h3>
+        <p>Flexible learning — join from anywhere or attend in-person at our Mumbai centre.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials-section">
+  <div class="container">
+    <div class="section-title">
+      <h2>What Our Students Say</h2>
+      <div class="underline"></div>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="testimonial-author">
+          <div class="author-avatar">R</div>
+          <div class="author-info">
+            <h4>Rahul S.</h4>
+            <p>Mechanical Engineer</p>
+          </div>
+        </div>
+        <p class="testimonial-text">NISHLAB helped me gain practical knowledge. Now I am working in a MNC as a Design Engineer. Best decision I made for my career.</p>
+        <div class="stars">★★★★★</div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-author">
+          <div class="author-avatar" style="background:#1a2f47;">S</div>
+          <div class="author-info">
+            <h4>Sneha M.</h4>
+            <p>Design Engineer</p>
+          </div>
+        </div>
+        <p class="testimonial-text">The trainers are very supportive and the course content is excellent. The Wadala-style teaching made everything super easy to understand. Highly recommended!</p>
+        <div class="stars">★★★★★</div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-author">
+          <div class="author-avatar" style="background:#d4891a;">V</div>
+          <div class="author-info">
+            <h4>Vikram J.</h4>
+            <p>CAE Engineer</p>
+          </div>
+        </div>
+        <p class="testimonial-text">Best place to learn CAD/CAE with live projects. Got placed in a top company within 2 months of completing the course. Thank you NISHLAB!</p>
+        <div class="stars">★★★★★</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<section class="cta-banner">
+  <div class="container">
+    <div class="cta-text">
+      <h2>Start Your Learning Journey Today!</h2>
+      <p>Join thousands of successful students and build a better career with us.</p>
+    </div>
+    <a href="pages/contact.html#enroll" class="btn btn-primary" style="font-size:15px;padding:16px 35px;">ENROLL NOW &nbsp;↗</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">
+          <img src="logo.png" alt="NISHLAB CREATIONS" />
+          <div class="footer-logo-text">NISHLAB<span>CREATIONS</span></div>
+        </div>
+        <p class="footer-about-text">We provide industry oriented training in CAD, CAM, CAE with 100% practical approach. Mumbai's most trusted engineering training institute.</p>
+        <div class="footer-social">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="pages/about.html">About Us</a></li>
+          <li><a href="pages/courses.html">Courses</a></li>
+          <li><a href="pages/online-training.html">Online Training</a></li>
+          <li><a href="pages/students.html">Students</a></li>
+          <li><a href="pages/contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Our Courses</h4>
+        <ul class="footer-links">
+          <li><a href="pages/courses.html#solidworks">SolidWorks</a></li>
+          <li><a href="pages/courses.html#catia">CATIA</a></li>
+          <li><a href="pages/courses.html#ansys">ANSYS</a></li>
+          <li><a href="pages/courses.html#nastran">NASTRAN</a></li>
+          <li><a href="pages/courses.html#mastercam">MasterCAM</a></li>
+          <li><a href="pages/courses.html#autocad">AutoCAD</a></li>
+          <li><a href="pages/courses.html#keyshot">KeyShot</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact Us</h4>
+        <ul class="footer-contact">
+          <li><i class="fas fa-phone"></i> +91 84240 99617</li>
+          <li><i class="fas fa-envelope"></i> info@nishlabcreations.com</li>
+          <li><i class="fas fa-map-marker-alt"></i> NISHLAB CREATIONS, Mumbai, Maharashtra, India</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Newsletter</h4>
+        <p style="color:rgba(255,255,255,0.6);font-size:13px;margin-bottom:15px;">Subscribe to get updates and latest offers.</p>
+        <form class="newsletter-form" autocomplete="off">
+          <input type="email" placeholder="Enter your email" required />
+          <button type="submit">SUBSCRIBE</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="footer-bottom">
+      <p>© 2024 NISHLAB CREATIONS. All Rights Reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms &amp; Conditions</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

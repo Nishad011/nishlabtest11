@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Courses – NISHLAB CREATIONS</title>
+<link rel="stylesheet" href="../css/style.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+<style>
+.filter-bar { padding: 30px 0; background: var(--white); border-bottom: 1px solid var(--border); }
+.filter-bar .container { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+.filter-btn {
+  padding: 9px 20px; border: 2px solid var(--border); background: var(--white);
+  border-radius: 30px; font-family: 'Montserrat', sans-serif; font-weight: 600;
+  font-size: 13px; cursor: pointer; transition: all 0.2s; color: var(--text-dark);
+}
+.filter-btn:hover, .filter-btn.active { border-color: var(--gold); background: var(--gold); color: var(--white); }
+.courses-full { padding: 60px 0; }
+.course-detail-card {
+  background: var(--white);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.09);
+  overflow: hidden;
+  margin-bottom: 50px;
+  display: grid;
+  grid-template-columns: 300px 1fr;
+}
+.course-detail-card:nth-child(even) { direction: rtl; }
+.course-detail-card:nth-child(even) > * { direction: ltr; }
+.course-thumb {
+  background: linear-gradient(135deg, var(--navy), var(--navy-light));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  font-size: 80px;
+  color: var(--gold);
+  gap: 15px;
+}
+.course-thumb .sw-label {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+  color: var(--white);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.course-detail-body { padding: 35px; }
+.course-detail-body .badge { margin-bottom: 12px; }
+.course-detail-body h2 { font-size: 26px; color: var(--navy); margin-bottom: 8px; }
+.course-detail-body .course-meta { display: flex; gap: 20px; flex-wrap: wrap; margin: 14px 0; }
+.meta-chip {
+  display: flex; align-items: center; gap: 6px;
+  font-size: 13px; color: var(--text-gray); font-weight: 600;
+}
+.meta-chip i { color: var(--gold); }
+.course-detail-body p { color: var(--text-gray); font-size: 14px; line-height: 1.8; margin-bottom: 18px; }
+.topics-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 20px; }
+.topic-item { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--navy); }
+.topic-item i { color: var(--gold); font-size: 12px; }
+.course-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 20px; }
+@media(max-width:900px){
+  .course-detail-card { grid-template-columns:1fr; }
+  .course-detail-card:nth-child(even) { direction: ltr; }
+  .topics-grid { grid-template-columns:1fr; }
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="container">
+    <div class="topbar-left">
+      <a href="mailto:info@nishlabcreations.com"><i class="fas fa-envelope"></i> info@nishlabcreations.com</a>
+      <a href="tel:+918424099617"><i class="fas fa-phone"></i> +91 84240 99617</a>
+    </div>
+    <div class="topbar-right">
+      <a href="students.html"><i class="fas fa-user"></i> Student Login</a>
+      <div class="topbar-social">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo">
+      <img src="../logo.png" alt="NISHLAB CREATIONS" />
+      <div class="nav-logo-text">NISHLAB<span>CREATIONS</span></div>
+    </a>
+    <button class="hamburger"><span></span><span></span><span></span></button>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li class="dropdown"><a href="courses.html" class="active">Courses ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="#solidworks">SolidWorks</a></li>
+          <li><a href="#catia">CATIA</a></li>
+          <li><a href="#ansys">ANSYS</a></li>
+          <li><a href="#nastran">NASTRAN</a></li>
+          <li><a href="#mastercam">MasterCAM</a></li>
+          <li><a href="#autocad">AutoCAD</a></li>
+          <li><a href="#keyshot">KeyShot</a></li>
+        </ul>
+      </li>
+      <li><a href="online-training.html">Online Training</a></li>
+      <li class="dropdown"><a href="students.html">Students ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="students.html">Student Portal</a></li>
+          <li><a href="students.html#placements">Placements</a></li>
+          <li><a href="students.html#testimonials">Testimonials</a></li>
+        </ul>
+      </li>
+      <li><a href="contact.html">Contact Us</a></li>
+      <li><a href="contact.html#enroll" class="btn-enroll">ENROLL NOW</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="../index.html">Home</a><span>›</span><span>Courses</span></div>
+    <h1>Our <span>Training Courses</span></h1>
+    <p>Industry-standard software training with practical, job-ready curriculum designed by working engineers.</p>
+  </div>
+</section>
+
+<div class="filter-bar">
+  <div class="container">
+    <span style="font-weight:700;font-family:'Montserrat',sans-serif;font-size:14px;color:var(--navy);">Filter:</span>
+    <button class="filter-btn active">All Courses</button>
+    <button class="filter-btn">CAD</button>
+    <button class="filter-btn">CAE / FEA</button>
+    <button class="filter-btn">CAM</button>
+    <button class="filter-btn">Rendering</button>
+    <button class="filter-btn">Automation</button>
+  </div>
+</div>
+
+<section class="courses-full">
+  <div class="container">
+
+    <!-- SOLIDWORKS -->
+    <div class="course-detail-card" id="solidworks">
+      <div class="course-thumb">🔩<span class="sw-label">SolidWorks</span></div>
+      <div class="course-detail-body">
+        <span class="badge">CAD – Most Popular</span>
+        <h2>SolidWorks Complete Course</h2>
+        <div class="course-meta">
+          <div class="meta-chip"><i class="fas fa-clock"></i> 45 Days</div>
+          <div class="meta-chip"><i class="fas fa-layer-group"></i> Beginner to Advanced</div>
+          <div class="meta-chip"><i class="fas fa-certificate"></i> Certificate Included</div>
+          <div class="meta-chip"><i class="fas fa-wifi"></i> Online + Offline</div>
+        </div>
+        <p>SolidWorks is the most in-demand CAD software in the Indian manufacturing and product design industry. This course covers everything from basic sketching to complex surface modeling, sheet metal, weldments, and simulation (SolidWorks Plastics, Motion, FEA basics).</p>
+        <p><strong>Topics Covered:</strong></p>
+        <div class="topics-grid">
+          <div class="topic-item"><i class="fas fa-check"></i> Part Modelling & Sketching</div>
+          <div class="topic-item"><i class="fas fa-check"></i> Assembly Design</div>
+          <div class="topic-item"><i class="fas fa-check"></i> Drawing & GD&T</div>
+          <div class="topic-item"><i class="fas fa-check"></i> Surface Modelling</div>
+          <div class="topic-item"><i class="fas fa-check"></i> Sheet Metal Design</div>
+          <div class="topic-item"><i class="fas fa-check"></i> Weldment Structures</div>
+          <div class="topic-item"><i class="fas fa-check"></i> SolidWorks Simulation</div>
+          <div class="topic-item"><i class="fas fa-check"></i> SolidWorks Plastics</div>
+        </div>
+        <div class="course-actions">
+          <a href="contact.html#enroll" class="btn btn-primary">Enroll Now ↗</a>
+          <a href="contact.html" class="btn btn-navy">Free Demo Class</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- CATIA -->
+    <div class="course-detail-card" id="catia">
+      <div class="course-thumb" style="background:linear-gradient(135deg,#1a2f47,#0d1b2a);">✈️<span class="sw-label">CATIA</span></div>
+      <div class="course-detail-body">
+        <span class="badge">CAD – Aerospace & Auto</span>
+        <h2>CATIA V5 / V6 Course</h2>
+        <div class="course-meta">
+          <div class="meta-chip"><i class="fas fa-clock"></i> 45 Days</div>
+          <div class="meta-chip"><i class="fas fa-layer-group"></i> Intermediate to Advanced</div>
+          <div class="meta-chip"><i class="fas fa-certificate"></i> Certificate Included</div>
+          <div class="meta-chip"><i class="fas fa-wifi"></i> Online + Offline</div>
+        </div>
+        <p>CATIA is the industry standard in aerospace, automotive and defence sectors. Learn CATIA V5/V6 with real-world automotive body panel and aircraft structural component design projects.</p>
+        <div class="topics-grid">
+          <div class="topic-item"><i class="fas fa-check"></i> Part Design (PD)</div>
+          <div class="topic-item"><i class="fas fa-check"></i> Assembly Design (ASD)</div>
+          <div class="topic-item"><i class="fas fa-check"></i> Generative Shape Design (GSD)</div>
+          <div class="topic-item"><i class="fas fa-check"></i> Drafting & Annotations</div>
+          <div class="topic-item"><i class="fas fa-check"></i> Sheet Metal (SMD)</div>
+          <div class="topic-item"><i class="fas fa-check"></i> Kinematics Simulation</div>
+          <div class="topic-item"><i class="fas fa-check"></i> DMU Navigator</div>
+          <div class="topic-item"><i class="fas fa-check"></i> ICEM Surfacing Basics</div>
+        </div>
+        <div class="course-actions">
+          <a href="contact.html#enroll" class="btn btn-primary">Enroll Now ↗</a>
+          <a href="contact.html" class="btn btn-navy">Free Demo Class</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ANSYS -->
+    <div class="course-detail-card" id="ansys">
+      <div class="course-thumb" style="background:linear-gradient(135deg,#0d3340,#0a5263);">🔥<span class="sw-label">ANSYS</span></div>
+      <div class="course-detail-body">
+        <span class="badge">CAE – Simulation</span>
+        <h2>ANSYS Complete CAE Course</h2>
+        <div class="course-meta">
+          <div class="meta-chip"><i class="fas fa-clock"></i> 45 Days</div>
+          <div class="meta-chip"><i class="fas fa-layer-group"></i> Beginner to Advanced</div>
+          <div class="meta-chip"><i class="fas fa-certificate"></i> Certificate Included</div>
+          <div class="meta-chip"><i class="fas fa-wifi"></i> Online + Offline</div>
+        </div>
+        <p>ANSYS is the world's leading CAE simulation software. This course covers structural analysis (FEA), thermal analysis, CFD (Fluent), explicit dynamics and fatigue analysis — all with real industry case studies.</p>
+        <div class="topics-grid">
+          <div class="topic-item"><i class="fas fa-check"></i> ANSYS Mechanical (Static Structural)</div>
+          <div class="topic-item"><i class="fas fa-check"></i> Thermal Analysis</div>
+          <div class="topic-item"><i class="fas fa-check"></i> Modal & Harmonic Analysis</div>
+          <div class="topic-item"><i class="fas fa-check"></i> ANSYS Fluent (CFD)</div>
+          <div class="topic-item"><i class="fas fa-check"></i> Explicit Dynamics</div>
+          <div class="topic-item"><i class="fas fa-check"></i> Fatigue & Life Prediction</div>
+          <div class="topic-item"><i class="fas fa-check"></i> APDL Scripting Basics</div>
+          <div class="topic-item"><i class="fas fa-check"></i> Composite Analysis</div>
+        </div>
+        <div class="course-actions">
+          <a href="contact.html#enroll" class="btn btn-primary">Enroll Now ↗</a>
+          <a href="contact.html" class="btn btn-navy">Free Demo Class</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- NASTRAN -->
+    <div class="course-detail-card" id="nastran">
+      <div class="course-thumb" style="background:linear-gradient(135deg,#243b55,#1a2f47);">🧮<span class="sw-label">NASTRAN</span></div>
+      <div class="course-detail-body">
+        <span class="badge">CAE – FEA</span>
+        <h2>MSC NASTRAN / Patran Course</h2>
+        <div class="course-meta">
+          <div class="meta-chip"><i class="fas fa-clock"></i> 45 Days</div>
+          <div class="meta-chip"><i class="fas fa-layer-group"></i> Intermediate to Advanced</div>
+          <div class="meta-chip"><i class="fas fa-certificate"></i> Certificate Included</div>
+          <div class="meta-chip"><i class="fas fa-wifi"></i> Online + Offline</div>
+        </div>
+        <p>MSC NASTRAN is widely used in aerospace, defence and heavy engineering for high-fidelity structural analysis. Learn meshing, boundary conditions, solver setup and result interpretation using Patran as the pre/post processor.</p>
+        <div class="topics-grid">
+          <div class="topic-item"><i class="fas fa-check"></i> FEA Fundamentals</div>
+          <div class="topic-item"><i class="fas fa-check"></i> Patran Pre/Post Processing</div>
+          <div class="topic-item"><i class="fas fa-check"></i> Linear Static Analysis</div>
+          <div class="topic-item"><i class="fas fa-check"></i> Normal Modes Analysis</div>
+          <div class="topic-item"><i class="fas fa-check"></i> Buckling Analysis</div>
+          <div class="topic-item"><i class="fas fa-check"></i> Dynamic Response</div>
+          <div class="topic-item"><i class="fas fa-check"></i> NASTRAN Bulk Data Deck</div>
+          <div class="topic-item"><i class="fas fa-check"></i> Composite Laminates</div>
+        </div>
+        <div class="course-actions">
+          <a href="contact.html#enroll" class="btn btn-primary">Enroll Now ↗</a>
+          <a href="contact.html" class="btn btn-navy">Free Demo Class</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- MASTERCAM -->
+    <div class="course-detail-card" id="mastercam">
+      <div class="course-thumb" style="background:linear-gradient(135deg,#2d1b0e,#5c3317);">🏭<span class="sw-label">MasterCAM</span></div>
+      <div class="course-detail-body">
+        <span class="badge">CAM – CNC Machining</span>
+        <h2>MasterCAM CNC Programming</h2>
+        <div class="course-meta">
+          <div class="meta-chip"><i class="fas fa-clock"></i> 45 Days</div>
+          <div class="meta-chip"><i class="fas fa-layer-group"></i> Beginner to Advanced</div>
+          <div class="meta-chip"><i class="fas fa-certificate"></i> Certificate Included</div>
+          <div class="meta-chip"><i class="fas fa-wifi"></i> Online + Offline</div>
+        </div>
+        <p>MasterCAM is the world's leading CAM software for CNC machining. Learn 2D/3D milling, turning, and multi-axis machining for the manufacturing industry. Ideal for tool & die, mould, and precision parts manufacturing.</p>
+        <div class="topics-grid">
+          <div class="topic-item"><i class="fas fa-check"></i> 2D Milling (Contour, Pocket, Drill)</div>
+          <div class="topic-item"><i class="fas fa-check"></i> 3D Surface Machining</div>
+          <div class="topic-item"><i class="fas fa-check"></i> Turning & Lathe Operations</div>
+          <div class="topic-item"><i class="fas fa-check"></i> 4-Axis Machining</div>
+          <div class="topic-item"><i class="fas fa-check"></i> Tool Library & Setup</div>
+          <div class="topic-item"><i class="fas fa-check"></i> G-Code & Post Processor</div>
+          <div class="topic-item"><i class="fas fa-check"></i> Simulation & Verification</div>
+          <div class="topic-item"><i class="fas fa-check"></i> Wire EDM Basics</div>
+        </div>
+        <div class="course-actions">
+          <a href="contact.html#enroll" class="btn btn-primary">Enroll Now ↗</a>
+          <a href="contact.html" class="btn btn-navy">Free Demo Class</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- AUTOCAD -->
+    <div class="course-detail-card" id="autocad">
+      <div class="course-thumb" style="background:linear-gradient(135deg,#1f3a1f,#2d5c2d);">📐<span class="sw-label">AutoCAD</span></div>
+      <div class="course-detail-body">
+        <span class="badge">CAD – 2D / 3D Drafting</span>
+        <h2>AutoCAD 2D & 3D Course</h2>
+        <div class="course-meta">
+          <div class="meta-chip"><i class="fas fa-clock"></i> 30 Days</div>
+          <div class="meta-chip"><i class="fas fa-layer-group"></i> Beginner to Intermediate</div>
+          <div class="meta-chip"><i class="fas fa-certificate"></i> Certificate Included</div>
+          <div class="meta-chip"><i class="fas fa-wifi"></i> Online + Offline</div>
+        </div>
+        <p>AutoCAD remains the most widely used drafting software across construction, MEP, civil and mechanical industries. Master 2D drawing and basic 3D modeling with real-world drawing exercises and GD&T standards.</p>
+        <div class="topics-grid">
+          <div class="topic-item"><i class="fas fa-check"></i> 2D Drawing Commands</div>
+          <div class="topic-item"><i class="fas fa-check"></i> Dimensions & Annotations</div>
+          <div class="topic-item"><i class="fas fa-check"></i> Blocks & Attributes</div>
+          <div class="topic-item"><i class="fas fa-check"></i> Layers & Plot Styles</div>
+          <div class="topic-item"><i class="fas fa-check"></i> 3D Solid Modelling</div>
+          <div class="topic-item"><i class="fas fa-check"></i> Isometric Drawing</div>
+          <div class="topic-item"><i class="fas fa-check"></i> Layout & Paper Space</div>
+          <div class="topic-item"><i class="fas fa-check"></i> AutoLISP Intro</div>
+        </div>
+        <div class="course-actions">
+          <a href="contact.html#enroll" class="btn btn-primary">Enroll Now ↗</a>
+          <a href="contact.html" class="btn btn-navy">Free Demo Class</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- KEYSHOT -->
+    <div class="course-detail-card" id="keyshot">
+      <div class="course-thumb" style="background:linear-gradient(135deg,#2a1a3e,#4a1a6e);">🎨<span class="sw-label">KeyShot</span></div>
+      <div class="course-detail-body">
+        <span class="badge">Rendering & Visualisation</span>
+        <h2>KeyShot Product Rendering</h2>
+        <div class="course-meta">
+          <div class="meta-chip"><i class="fas fa-clock"></i> 20 Days</div>
+          <div class="meta-chip"><i class="fas fa-layer-group"></i> Beginner to Intermediate</div>
+          <div class="meta-chip"><i class="fas fa-certificate"></i> Certificate Included</div>
+          <div class="meta-chip"><i class="fas fa-wifi"></i> Online + Offline</div>
+        </div>
+        <p>KeyShot is the leading real-time 3D rendering software for product design and marketing. Learn to produce photorealistic product visuals, animations and turntables from SolidWorks/CATIA models.</p>
+        <div class="topics-grid">
+          <div class="topic-item"><i class="fas fa-check"></i> Import from SolidWorks/CATIA</div>
+          <div class="topic-item"><i class="fas fa-check"></i> Material & Texture Mapping</div>
+          <div class="topic-item"><i class="fas fa-check"></i> HDRI & Studio Lighting</div>
+          <div class="topic-item"><i class="fas fa-check"></i> Camera & Perspective Setup</div>
+          <div class="topic-item"><i class="fas fa-check"></i> Photorealistic Rendering</div>
+          <div class="topic-item"><i class="fas fa-check"></i> Animation & Turntables</div>
+          <div class="topic-item"><i class="fas fa-check"></i> Exploded View Animations</div>
+          <div class="topic-item"><i class="fas fa-check"></i> Portfolio Project</div>
+        </div>
+        <div class="course-actions">
+          <a href="contact.html#enroll" class="btn btn-primary">Enroll Now ↗</a>
+          <a href="contact.html" class="btn btn-navy">Free Demo Class</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-banner">
+  <div class="container">
+    <div class="cta-text">
+      <h2>Not Sure Which Course to Pick?</h2>
+      <p>Get free career guidance from our expert trainers — we'll help you choose the right path.</p>
+    </div>
+    <a href="contact.html" class="btn btn-primary" style="font-size:15px;padding:16px 35px;">GET FREE GUIDANCE ↗</a>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">
+          <img src="../logo.png" alt="NISHLAB CREATIONS" />
+          <div class="footer-logo-text">NISHLAB<span>CREATIONS</span></div>
+        </div>
+        <p class="footer-about-text">Industry oriented training in CAD, CAM, CAE with 100% practical approach.</p>
+        <div class="footer-social">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <div class="footer-col"><h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="courses.html">Courses</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col"><h4>Our Courses</h4>
+        <ul class="footer-links">
+          <li><a href="#solidworks">SolidWorks</a></li>
+          <li><a href="#catia">CATIA</a></li>
+          <li><a href="#ansys">ANSYS</a></li>
+          <li><a href="#nastran">NASTRAN</a></li>
+          <li><a href="#mastercam">MasterCAM</a></li>
+          <li><a href="#autocad">AutoCAD</a></li>
+          <li><a href="#keyshot">KeyShot</a></li>
+        </ul>
+      </div>
+      <div class="footer-col"><h4>Contact Us</h4>
+        <ul class="footer-contact">
+          <li><i class="fas fa-phone"></i> +91 84240 99617</li>
+          <li><i class="fas fa-envelope"></i> info@nishlabcreations.com</li>
+          <li><i class="fas fa-map-marker-alt"></i> Mumbai, Maharashtra, India</li>
+        </ul>
+      </div>
+      <div class="footer-col"><h4>Newsletter</h4>
+        <form class="newsletter-form" autocomplete="off">
+          <input type="email" placeholder="Enter your email" required />
+          <button type="submit">SUBSCRIBE</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="footer-bottom">
+      <p>© 2024 NISHLAB CREATIONS. All Rights Reserved.</p>
+      <div class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms &amp; Conditions</a></div>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+<script>
+// Filter buttons (visual only demo)
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', function () {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    this.classList.add('active');
+  });
+});
+</script>
+</body>
+</html>

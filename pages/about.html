@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>About Us – NISHLAB CREATIONS</title>
+<link rel="stylesheet" href="../css/style.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+<style>
+.about-section { padding: 70px 0; }
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+.about-img-block {
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+  border-radius: 12px;
+  height: 380px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 100px;
+  position: relative;
+  overflow: hidden;
+}
+.about-img-block::after {
+  content: '';
+  position: absolute;
+  bottom: 0; right: 0;
+  width: 120px; height: 120px;
+  background: var(--gold);
+  opacity: 0.15;
+  border-radius: 50% 0 0 0;
+}
+.about-content h2 { font-size: 32px; color: var(--navy); margin-bottom: 15px; }
+.about-content h2 span { color: var(--gold); }
+.about-content p { color: var(--text-gray); font-size: 14.5px; line-height: 1.8; margin-bottom: 15px; }
+.about-highlights { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin: 25px 0; }
+.highlight-item { display: flex; align-items: center; gap: 10px; font-size: 13.5px; font-weight: 600; color: var(--navy); }
+.highlight-item i { color: var(--gold); font-size: 18px; }
+.team-section { padding: 70px 0; background: var(--light-bg); }
+.team-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+.team-card { background: var(--white); border-radius: 10px; overflow: hidden; box-shadow: 0 3px 15px rgba(0,0,0,0.08); text-align: center; }
+.team-avatar { height: 200px; background: linear-gradient(135deg, var(--navy), var(--navy-light)); display: flex; align-items: center; justify-content: center; font-size: 70px; color: var(--gold); }
+.team-info { padding: 20px; }
+.team-info h3 { font-size: 17px; color: var(--navy); margin-bottom: 5px; }
+.team-info .role { color: var(--gold); font-size: 13px; font-weight: 600; margin-bottom: 10px; }
+.team-info p { font-size: 13px; color: var(--text-gray); line-height: 1.6; }
+.mission-section { padding: 70px 0; }
+.mission-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+.mission-card { text-align: center; padding: 35px 25px; border-radius: 12px; border: 2px solid var(--border); transition: border-color 0.3s, transform 0.3s; }
+.mission-card:hover { border-color: var(--gold); transform: translateY(-4px); }
+.mission-icon { width: 70px; height: 70px; background: var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 28px; color: var(--white); }
+.mission-card h3 { font-size: 18px; color: var(--navy); margin-bottom: 12px; }
+.mission-card p { font-size: 13.5px; color: var(--text-gray); line-height: 1.7; }
+@media(max-width:900px){ .about-grid,.team-grid,.mission-grid{ grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="container">
+    <div class="topbar-left">
+      <a href="mailto:info@nishlabcreations.com"><i class="fas fa-envelope"></i> info@nishlabcreations.com</a>
+      <a href="tel:+918424099617"><i class="fas fa-phone"></i> +91 84240 99617</a>
+    </div>
+    <div class="topbar-right">
+      <a href="students.html"><i class="fas fa-user"></i> Student Login</a>
+      <div class="topbar-social">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo">
+      <img src="../logo.png" alt="NISHLAB CREATIONS" />
+      <div class="nav-logo-text">NISHLAB<span>CREATIONS</span></div>
+    </a>
+    <button class="hamburger"><span></span><span></span><span></span></button>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="about.html" class="active">About Us</a></li>
+      <li class="dropdown">
+        <a href="courses.html">Courses ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="courses.html#solidworks">SolidWorks</a></li>
+          <li><a href="courses.html#catia">CATIA</a></li>
+          <li><a href="courses.html#ansys">ANSYS</a></li>
+          <li><a href="courses.html#nastran">NASTRAN</a></li>
+          <li><a href="courses.html#mastercam">MasterCAM</a></li>
+          <li><a href="courses.html#autocad">AutoCAD</a></li>
+          <li><a href="courses.html#keyshot">KeyShot</a></li>
+        </ul>
+      </li>
+      <li><a href="online-training.html">Online Training</a></li>
+      <li class="dropdown">
+        <a href="students.html">Students ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="students.html">Student Portal</a></li>
+          <li><a href="students.html#placements">Placements</a></li>
+          <li><a href="students.html#testimonials">Testimonials</a></li>
+        </ul>
+      </li>
+      <li><a href="contact.html">Contact Us</a></li>
+      <li><a href="contact.html#enroll" class="btn-enroll">ENROLL NOW</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../index.html">Home</a>
+      <span>›</span>
+      <span>About Us</span>
+    </div>
+    <h1>About <span>NISHLAB CREATIONS</span></h1>
+    <p>Mumbai's most trusted engineering training institute, shaping the next generation of CAD/CAE professionals.</p>
+  </div>
+</section>
+
+<!-- ABOUT SECTION -->
+<section class="about-section">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-img-block">⚙️</div>
+      <div class="about-content">
+        <span class="badge">Who We Are</span>
+        <h2 style="margin-top:15px;">Engineering Excellence <span>Since Day One</span></h2>
+        <p>NISHLAB CREATIONS is a Mumbai-based engineering training institute founded with one mission: to give mechanical engineering students the real-world skills that colleges don't teach. We specialise in CAD, CAM, and CAE software training with a 100% practical, industry-first approach.</p>
+        <p>Our training methodology — what students lovingly call the "Wadala style" — is informal, Hindi-medium, and deeply practical. We break down complex software concepts into clear, actionable steps so every student, regardless of background, can master professional engineering tools.</p>
+        <p>From SolidWorks and CATIA to ANSYS and MasterCAM, our courses are designed to directly map to job requirements in manufacturing, automotive, aerospace, and product design industries.</p>
+        <div class="about-highlights">
+          <div class="highlight-item"><i class="fas fa-check-circle"></i> MSME/Udyam Registered</div>
+          <div class="highlight-item"><i class="fas fa-check-circle"></i> 2500+ Students Trained</div>
+          <div class="highlight-item"><i class="fas fa-check-circle"></i> 100% Practical Approach</div>
+          <div class="highlight-item"><i class="fas fa-check-circle"></i> Online + Offline Batches</div>
+          <div class="highlight-item"><i class="fas fa-check-circle"></i> Industry Certified Trainers</div>
+          <div class="highlight-item"><i class="fas fa-check-circle"></i> Placement Support</div>
+        </div>
+        <a href="contact.html#enroll" class="btn btn-primary">Enroll Now ↗</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MISSION / VISION / VALUES -->
+<section class="mission-section bg-light">
+  <div class="container">
+    <div class="section-title">
+      <h2>Our Mission & Vision</h2>
+      <div class="underline"></div>
+    </div>
+    <div class="mission-grid">
+      <div class="mission-card">
+        <div class="mission-icon"><i class="fas fa-bullseye"></i></div>
+        <h3>Our Mission</h3>
+        <p>To provide affordable, industry-oriented engineering training that bridges the gap between academic learning and real-world job requirements.</p>
+      </div>
+      <div class="mission-card">
+        <div class="mission-icon"><i class="fas fa-eye"></i></div>
+        <h3>Our Vision</h3>
+        <p>To become India's most trusted CAD/CAE training platform, empowering 10,000+ engineers with job-ready skills by 2027.</p>
+      </div>
+      <div class="mission-card">
+        <div class="mission-icon"><i class="fas fa-heart"></i></div>
+        <h3>Our Values</h3>
+        <p>Practicality first. Respect for every learner's pace. Transparency in training. Commitment to student success above all else.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section class="team-section">
+  <div class="container">
+    <div class="section-title">
+      <h2>Meet Our Trainers</h2>
+      <p>Experienced professionals with real industry backgrounds</p>
+      <div class="underline"></div>
+    </div>
+    <div class="team-grid">
+      <div class="team-card">
+        <div class="team-avatar"><i class="fas fa-user-tie"></i></div>
+        <div class="team-info">
+          <h3>Nishad A. Saifi</h3>
+          <p class="role">Founder & Lead Trainer – SolidWorks / ANSYS</p>
+          <p>Mechanical engineer with experience in CAD, CAE, XR/VR design and solar PV engineering. Passionate about hands-on, industry-first teaching.</p>
+        </div>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar"><i class="fas fa-drafting-compass"></i></div>
+        <div class="team-info">
+          <h3>Senior CATIA Trainer</h3>
+          <p class="role">CATIA V5 / V6 Expert</p>
+          <p>10+ years of experience in aerospace and automotive CAD with hands-on expertise in CATIA surfacing and assembly design.</p>
+        </div>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar"><i class="fas fa-cogs"></i></div>
+        <div class="team-info">
+          <h3>CAE Specialist</h3>
+          <p class="role">ANSYS / NASTRAN Expert</p>
+          <p>Structural and thermal FEA specialist with industry experience in automotive crash analysis, fatigue and vibration studies.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats-section">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item"><h3><span class="counter" data-target="2500" data-suffix="+">2500+</span></h3><p>Students Trained</p></div>
+      <div class="stat-item"><h3><span class="counter" data-target="50" data-suffix="+">50+</span></h3><p>Courses Offered</p></div>
+      <div class="stat-item"><h3><span class="counter" data-target="10" data-suffix="+">10+</span></h3><p>Expert Trainers</p></div>
+      <div class="stat-item"><h3><span class="counter" data-target="100" data-suffix="%">100%</span></h3><p>Placement Support</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-banner">
+  <div class="container">
+    <div class="cta-text">
+      <h2>Ready to Start Your Journey?</h2>
+      <p>Get free career guidance from our expert trainers today.</p>
+    </div>
+    <a href="contact.html#enroll" class="btn btn-primary" style="font-size:15px;padding:16px 35px;">GET FREE GUIDANCE ↗</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">
+          <img src="../logo.png" alt="NISHLAB CREATIONS" />
+          <div class="footer-logo-text">NISHLAB<span>CREATIONS</span></div>
+        </div>
+        <p class="footer-about-text">Industry oriented training in CAD, CAM, CAE with 100% practical approach.</p>
+        <div class="footer-social">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="courses.html">Courses</a></li>
+          <li><a href="online-training.html">Online Training</a></li>
+          <li><a href="students.html">Students</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Our Courses</h4>
+        <ul class="footer-links">
+          <li><a href="courses.html#solidworks">SolidWorks</a></li>
+          <li><a href="courses.html#catia">CATIA</a></li>
+          <li><a href="courses.html#ansys">ANSYS</a></li>
+          <li><a href="courses.html#nastran">NASTRAN</a></li>
+          <li><a href="courses.html#mastercam">MasterCAM</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact Us</h4>
+        <ul class="footer-contact">
+          <li><i class="fas fa-phone"></i> +91 84240 99617</li>
+          <li><i class="fas fa-envelope"></i> info@nishlabcreations.com</li>
+          <li><i class="fas fa-map-marker-alt"></i> Mumbai, Maharashtra, India</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Newsletter</h4>
+        <p style="color:rgba(255,255,255,0.6);font-size:13px;margin-bottom:15px;">Subscribe for latest updates.</p>
+        <form class="newsletter-form" autocomplete="off">
+          <input type="email" placeholder="Enter your email" required />
+          <button type="submit">SUBSCRIBE</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="footer-bottom">
+      <p>© 2024 NISHLAB CREATIONS. All Rights Reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms &amp; Conditions</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

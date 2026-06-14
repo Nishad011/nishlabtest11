@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Students – NISHLAB CREATIONS</title>
+<link rel="stylesheet" href="../css/style.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+<style>
+.placements-section { padding: 70px 0; }
+.placement-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.placement-card { background: var(--white); border-radius: 10px; padding: 25px; box-shadow: 0 3px 15px rgba(0,0,0,0.08); text-align: center; transition: transform 0.3s; }
+.placement-card:hover { transform: translateY(-4px); }
+.placement-avatar { width: 65px; height: 65px; border-radius: 50%; background: linear-gradient(135deg, var(--navy), var(--navy-light)); display: flex; align-items: center; justify-content: center; font-family:'Montserrat',sans-serif; font-weight:900; font-size:22px; color:var(--white); margin: 0 auto 12px; }
+.placement-card h4 { font-size: 15px; color: var(--navy); margin-bottom: 4px; }
+.placement-card .placed-at { color: var(--gold); font-size: 12px; font-weight: 700; margin-bottom: 4px; }
+.placement-card .course-took { color: var(--text-gray); font-size: 12px; }
+.reviews-section { padding: 70px 0; background: var(--light-bg); }
+.reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; }
+.review-card { background: var(--white); border-radius: 10px; padding: 25px; box-shadow: 0 3px 15px rgba(0,0,0,0.07); }
+.review-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 15px; }
+.review-author { display: flex; align-items: center; gap: 12px; }
+.r-avatar { width: 45px; height: 45px; border-radius: 50%; background: var(--gold); display: flex; align-items: center; justify-content: center; font-family:'Montserrat',sans-serif; font-weight:800; font-size:16px; color:var(--white); flex-shrink:0; }
+.r-name { font-size: 14px; font-weight: 700; color: var(--navy); }
+.r-course { font-size: 12px; color: var(--text-gray); }
+.review-text { font-size: 13.5px; color: var(--text-gray); line-height: 1.7; margin-bottom: 12px; }
+.faq-section { padding: 70px 0; }
+.faq-grid { max-width: 800px; margin: 0 auto; }
+.faq-item { border: 1px solid var(--border); border-radius: 8px; margin-bottom: 12px; overflow: hidden; }
+.faq-q { padding: 18px 20px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; font-weight: 700; font-family:'Montserrat',sans-serif; font-size: 14px; color: var(--navy); background: var(--white); transition: background 0.2s; }
+.faq-q:hover { background: var(--light-bg); }
+.faq-q i { color: var(--gold); transition: transform 0.3s; }
+.faq-a { display: none; padding: 0 20px 18px; font-size: 13.5px; color: var(--text-gray); line-height: 1.7; background: var(--white); }
+.faq-item.open .faq-q i { transform: rotate(180deg); }
+.faq-item.open .faq-a { display: block; }
+@media(max-width:900px){ .placement-grid,.reviews-grid{ grid-template-columns:repeat(2,1fr); } }
+@media(max-width:600px){ .placement-grid{ grid-template-columns:1fr 1fr; } .reviews-grid{ grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+
+<div class="topbar"><div class="container">
+  <div class="topbar-left">
+    <a href="mailto:info@nishlabcreations.com"><i class="fas fa-envelope"></i> info@nishlabcreations.com</a>
+    <a href="tel:+918424099617"><i class="fas fa-phone"></i> +91 84240 99617</a>
+  </div>
+  <div class="topbar-right">
+    <a href="#"><i class="fas fa-user"></i> Student Login</a>
+    <div class="topbar-social"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-youtube"></i></a><a href="#"><i class="fab fa-linkedin-in"></i></a></div>
+  </div>
+</div></div>
+
+<nav class="navbar"><div class="nav-inner">
+  <a href="../index.html" class="nav-logo"><img src="../logo.png" alt="NISHLAB CREATIONS" /><div class="nav-logo-text">NISHLAB<span>CREATIONS</span></div></a>
+  <button class="hamburger"><span></span><span></span><span></span></button>
+  <ul class="nav-links">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li class="dropdown"><a href="courses.html">Courses ▾</a>
+      <ul class="dropdown-menu"><li><a href="courses.html#solidworks">SolidWorks</a></li><li><a href="courses.html#catia">CATIA</a></li><li><a href="courses.html#ansys">ANSYS</a></li></ul>
+    </li>
+    <li><a href="online-training.html">Online Training</a></li>
+    <li class="dropdown"><a href="students.html" class="active">Students ▾</a>
+      <ul class="dropdown-menu"><li><a href="students.html">Student Portal</a></li><li><a href="#placements">Placements</a></li><li><a href="#testimonials">Testimonials</a></li></ul>
+    </li>
+    <li><a href="contact.html">Contact Us</a></li>
+    <li><a href="contact.html#enroll" class="btn-enroll">ENROLL NOW</a></li>
+  </ul>
+</div></nav>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="../index.html">Home</a><span>›</span><span>Students</span></div>
+    <h1>Our <span>Student Community</span></h1>
+    <p>2500+ engineers trained. Placements across top Indian and multinational companies.</p>
+  </div>
+</section>
+
+<section class="stats-section">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item"><h3><span class="counter" data-target="2500" data-suffix="+">2500+</span></h3><p>Students Trained</p></div>
+      <div class="stat-item"><h3><span class="counter" data-target="95" data-suffix="%">95%</span></h3><p>Placement Rate</p></div>
+      <div class="stat-item"><h3><span class="counter" data-target="150" data-suffix="+">150+</span></h3><p>Companies Partnered</p></div>
+      <div class="stat-item"><h3><span class="counter" data-target="100" data-suffix="%">100%</span></h3><p>Satisfaction Rate</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="placements-section" id="placements">
+  <div class="container">
+    <div class="section-title">
+      <h2>Student Placements</h2>
+      <p>Our students are working at top engineering companies across India</p>
+      <div class="underline"></div>
+    </div>
+    <div class="placement-grid">
+      <div class="placement-card"><div class="placement-avatar">R</div><h4>Rahul S.</h4><p class="placed-at">Tata Motors – Design Eng.</p><p class="course-took">SolidWorks</p></div>
+      <div class="placement-card"><div class="placement-avatar" style="background:linear-gradient(135deg,#d4891a,#f5a623);">S</div><h4>Sneha M.</h4><p class="placed-at">Godrej – Design Engineer</p><p class="course-took">CATIA + SolidWorks</p></div>
+      <div class="placement-card"><div class="placement-avatar" style="background:linear-gradient(135deg,#1a5c3a,#2d9e63);">V</div><h4>Vikram J.</h4><p class="placed-at">Larsen & Toubro – CAE</p><p class="course-took">ANSYS + NASTRAN</p></div>
+      <div class="placement-card"><div class="placement-avatar" style="background:linear-gradient(135deg,#4a1a6e,#7b2fa8);">P</div><h4>Priya K.</h4><p class="placed-at">Mahindra – CAD Engineer</p><p class="course-took">CATIA V5</p></div>
+      <div class="placement-card"><div class="placement-avatar" style="background:linear-gradient(135deg,#0d3340,#0a5263);">A</div><h4>Amit D.</h4><p class="placed-at">Bosch India – CAD Eng.</p><p class="course-took">SolidWorks + AutoCAD</p></div>
+      <div class="placement-card"><div class="placement-avatar" style="background:linear-gradient(135deg,#2d1b0e,#5c3317);">N</div><h4>Neha R.</h4><p class="placed-at">Eaton India – FEA Eng.</p><p class="course-took">ANSYS Mechanical</p></div>
+      <div class="placement-card"><div class="placement-avatar" style="background:linear-gradient(135deg,#1f3a1f,#2d5c2d);">K</div><h4>Kiran S.</h4><p class="placed-at">Tata Consultancy – CAM</p><p class="course-took">MasterCAM</p></div>
+      <div class="placement-card"><div class="placement-avatar" style="background:linear-gradient(135deg,#2a2a4e,#3a3a8e);">M</div><h4>Manish T.</h4><p class="placed-at">Thermax – Design Eng.</p><p class="course-took">AutoCAD + SolidWorks</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="reviews-section" id="testimonials">
+  <div class="container">
+    <div class="section-title">
+      <h2>What Our Students Say</h2>
+      <p>Real reviews from real engineers who trained at NISHLAB</p>
+      <div class="underline"></div>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="review-header">
+          <div class="review-author"><div class="r-avatar">R</div><div><div class="r-name">Rahul S.</div><div class="r-course">SolidWorks | Placed at Tata Motors</div></div></div>
+          <div class="stars">★★★★★</div>
+        </div>
+        <p class="review-text">Nishlab helped me gain practical knowledge that my engineering college never gave me. Nishad sir's teaching style is simple, direct and very effective. Now I am working as a Design Engineer at Tata Motors.</p>
+      </div>
+      <div class="review-card">
+        <div class="review-header">
+          <div class="review-author"><div class="r-avatar" style="background:#1a2f47;">S</div><div><div class="r-name">Sneha M.</div><div class="r-course">CATIA + SolidWorks | Placed at Godrej</div></div></div>
+          <div class="stars">★★★★★</div>
+        </div>
+        <p class="review-text">The trainers are very supportive and the course content is excellent. I loved the live project work — it gave me real confidence in the software. Highly recommended for all mechanical engineering students!</p>
+      </div>
+      <div class="review-card">
+        <div class="review-header">
+          <div class="review-author"><div class="r-avatar" style="background:#d4891a;">V</div><div><div class="r-name">Vikram J.</div><div class="r-course">ANSYS | Placed at L&T</div></div></div>
+          <div class="stars">★★★★★</div>
+        </div>
+        <p class="review-text">Best place to learn CAD/CAE with live projects. The ANSYS course was very detailed — from basics to advanced simulation. Got placed in a top company within 2 months of completing the course.</p>
+      </div>
+      <div class="review-card">
+        <div class="review-header">
+          <div class="review-author"><div class="r-avatar" style="background:#1a5c3a;">P</div><div><div class="r-name">Priya K.</div><div class="r-course">CATIA V5 | Placed at Mahindra</div></div></div>
+          <div class="stars">★★★★★</div>
+        </div>
+        <p class="review-text">I was a complete beginner when I joined. The batch was small so sir gave individual attention to everyone. Within 45 days I was confident enough to clear the Mahindra technical interview.</p>
+      </div>
+      <div class="review-card">
+        <div class="review-header">
+          <div class="review-author"><div class="r-avatar" style="background:#2a1a3e;">A</div><div><div class="r-name">Amit D.</div><div class="r-course">SolidWorks + AutoCAD | Placed at Bosch</div></div></div>
+          <div class="stars">★★★★★</div>
+        </div>
+        <p class="review-text">Online training was just as good as offline. The recordings helped me revise whenever I needed. The Telegram group for Q&A is extremely helpful even after the course ends.</p>
+      </div>
+      <div class="review-card">
+        <div class="review-header">
+          <div class="review-author"><div class="r-avatar" style="background:#0d3340;">N</div><div><div class="r-name">Neha R.</div><div class="r-course">ANSYS Mechanical | Placed at Eaton</div></div></div>
+          <div class="stars">★★★★★</div>
+        </div>
+        <p class="review-text">The ANSYS course covered everything I needed for my FEA engineer interview. Resume preparation and mock interviews by NISHLAB team were extremely helpful. Highly professional institute!</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq-section bg-light">
+  <div class="container">
+    <div class="section-title">
+      <h2>Frequently Asked Questions</h2>
+      <div class="underline"></div>
+    </div>
+    <div class="faq-grid">
+      <div class="faq-item">
+        <div class="faq-q">Do I need prior CAD experience to join? <i class="fas fa-chevron-down"></i></div>
+        <div class="faq-a">No prior experience is needed for most courses. We start from absolute zero and build up to advanced level. Basic computer knowledge is sufficient.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Are the online classes live or recorded? <i class="fas fa-chevron-down"></i></div>
+        <div class="faq-a">All classes are LIVE with a real trainer. Recordings are shared after every class so you can revise at any time.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What software do I need for online classes? <i class="fas fa-chevron-down"></i></div>
+        <div class="faq-a">You need the specific CAD/CAE software (we help you set it up), Google Meet/Zoom for classes, and Telegram for support. All setup guidance is provided on enrollment.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Is the certificate from NISHLAB recognised? <i class="fas fa-chevron-down"></i></div>
+        <div class="faq-a">NISHLAB CREATIONS is an MSME/Udyam registered institute. Our certificates are valid for job applications and demonstrate hands-on practical training to employers.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What is the fee structure? <i class="fas fa-chevron-down"></i></div>
+        <div class="faq-a">Fees vary by course. Contact us via WhatsApp or the enquiry form for the latest pricing. We offer flexible payment options and occasional scholarships for meritorious students.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Do you provide placement assistance? <i class="fas fa-chevron-down"></i></div>
+        <div class="faq-a">Yes! We help with resume building, LinkedIn profile optimisation, mock technical interviews, and direct referrals to our hiring company network.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Can working professionals join? <i class="fas fa-chevron-down"></i></div>
+        <div class="faq-a">Absolutely. We have morning, evening and weekend batches designed for working professionals who want to upskill without disrupting their current job.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-banner">
+  <div class="container">
+    <div class="cta-text"><h2>Join 2500+ Successful Engineers</h2><p>Enroll today and take the first step towards your dream engineering career.</p></div>
+    <a href="contact.html#enroll" class="btn btn-primary" style="font-size:15px;padding:16px 35px;">ENROLL NOW ↗</a>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo"><img src="../logo.png" alt="NISHLAB CREATIONS" /><div class="footer-logo-text">NISHLAB<span>CREATIONS</span></div></div>
+        <p class="footer-about-text">Industry oriented training in CAD, CAM, CAE with 100% practical approach.</p>
+        <div class="footer-social"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-youtube"></i></a><a href="#"><i class="fab fa-linkedin-in"></i></a></div>
+      </div>
+      <div class="footer-col"><h4>Quick Links</h4>
+        <ul class="footer-links"><li><a href="../index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="courses.html">Courses</a></li><li><a href="contact.html">Contact Us</a></li></ul>
+      </div>
+      <div class="footer-col"><h4>Our Courses</h4>
+        <ul class="footer-links"><li><a href="courses.html#solidworks">SolidWorks</a></li><li><a href="courses.html#catia">CATIA</a></li><li><a href="courses.html#ansys">ANSYS</a></li><li><a href="courses.html#nastran">NASTRAN</a></li><li><a href="courses.html#mastercam">MasterCAM</a></li></ul>
+      </div>
+      <div class="footer-col"><h4>Contact Us</h4>
+        <ul class="footer-contact"><li><i class="fas fa-phone"></i> +91 84240 99617</li><li><i class="fas fa-envelope"></i> info@nishlabcreations.com</li><li><i class="fas fa-map-marker-alt"></i> Mumbai, Maharashtra, India</li></ul>
+      </div>
+      <div class="footer-col"><h4>Newsletter</h4>
+        <form class="newsletter-form" autocomplete="off"><input type="email" placeholder="Enter your email" required /><button type="submit">SUBSCRIBE</button></form>
+      </div>
+    </div>
+  </div>
+  <div class="container"><div class="footer-bottom"><p>© 2024 NISHLAB CREATIONS. All Rights Reserved.</p><div class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms &amp; Conditions</a></div></div></div>
+</footer>
+
+<script src="../js/main.js"></script>
+<script>
+document.querySelectorAll('.faq-q').forEach(q => {
+  q.addEventListener('click', function() {
+    const item = this.parentElement;
+    item.classList.toggle('open');
+  });
+});
+</script>
+</body>
+</html>
